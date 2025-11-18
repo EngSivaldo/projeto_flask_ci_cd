@@ -20,9 +20,8 @@ jobs:
     - name: Instalar dependências
       run: pip install -r requirements.txt
 
-    - name: Testar se o Flask sobe sem erro
+    - name: Testar se o Flask importa corretamente
       run: |
         python - << 'EOF'
 from app import app
-print("Flask importado com sucesso!")
-EOF
+print("Flask importado com sucesso!")EOF
