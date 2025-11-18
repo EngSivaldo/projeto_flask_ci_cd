@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ titulo }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #f4f4f9;
+        }
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: auto;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            color: #666;
+            font-size: 1.1em;
+        }
+        .status {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #e6f7ff;
+            border: 1px solid #c2e2ff;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>✅ {{ titulo }}</h1>
+        <h2>Parabéns! O CI/CD está configurado e Funcional!</h2>
+
+        <p>Esta página foi implantada automaticamente via GitHub Actions e Railway.</p>
+
+        <div class="status">
+            <p><strong>Versão do Aplicativo:</strong> {{ versao }}</p>
+            <p><strong>Ambiente de Deploy:</strong> {{ ambiente }}</p>
+            <p><strong>Última Atualização:</strong> {{ hora_atual }}</p>
+        </div>
+        
+        <p>Agora você pode focar no desenvolvimento, e o deploy acontece sozinho!</p>
+    </div>
+</body>
+</html>
